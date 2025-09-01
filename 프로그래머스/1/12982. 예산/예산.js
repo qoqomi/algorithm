@@ -1,13 +1,18 @@
 function solution(d, budget) {
-    const result = d.sort((a,b)=>a-b)
     let count = 0
-    for(let i = 0; i < d.length; i++){
-        if(d[i] > budget) {
-            break;
+    let total = 0
+    
+    const order = d.sort((a,b)=>a-b)
+        
+    for(let i of order){
+        if(i <= budget){
+            budget -= i
+            count+=1
         }
-        budget -= d[i]
-        count += 1
     }
+    
+    
+  
   
     return count
 }
