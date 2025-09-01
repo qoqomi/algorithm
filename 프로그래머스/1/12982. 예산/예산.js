@@ -5,7 +5,6 @@ function solution(d, budget) {
         if(d[i] > budget) {
             break;
         }
-        console.log("result",count)
         budget -= d[i]
         count += 1
     }
